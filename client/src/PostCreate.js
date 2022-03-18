@@ -6,16 +6,18 @@ const PostCreate = () => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
+
     await axios.post("http://localhost:4000/posts", {
       title,
     });
 
     setTitle("");
   };
+
   return (
     <div>
       <form onSubmit={onSubmit}>
-        <div className="formGroup">
+        <div className="form-group">
           <label>Title</label>
           <input
             value={title}
