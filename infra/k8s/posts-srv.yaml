@@ -3,4 +3,6 @@ kind: Service
 metadata:
   name: posts-srv
 spec:
+  selector:
+    app: posts-srv
 
